@@ -65,7 +65,7 @@ que donen els mateixos resultats...
 27 db.newYork.find({},{"name": 1, "cuisine":1, "borough": 1, _id: 0}).sort({"cuisine": 1, "borough":-1});
 
 // Per a la consulta 28, he fet 2 + 1 opcions perquè no em quedava clara la consulta. Amb qualsevol de les dues primeres pots comprovar si el camp està definit a tots els documents.
-Amb la tercera comproves al mateix temps si hi ha algun camp buit o si està buit en algun document.
+Amb la tercera comproves al mateix temps si no està definit en algun document o si existeix però està buit.
 
 28 db.newYork.find({"address.street": {$exists: true}); 
  
